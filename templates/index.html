@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Emotion Detector</title>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css"
+  />
+</head>
+<body class="bg-light">
+  <div class="container py-5" style="max-width: 640px;">
+    <h1 class="mb-4 text-center">Emotion Detector</h1>
+
+    <div class="input-group mb-3">
+      <input
+        type="text"
+        id="textToAnalyze"
+        class="form-control"
+        placeholder="Enter text to analyze..."
+      />
+      <button class="btn btn-primary" onclick="RunSentimentAnalysis()">
+        Run Emotion Detection
+      </button>
+    </div>
+
+    <p id="system_response" class="fs-5"></p>
+  </div>
+
+  <script src="/static/mywebscript.js"></script>
+</body>
+</html>
