@@ -1,51 +1,36 @@
-# Emotion Detection with Watson NLP
+# Proyecto Final: Emotion Detection with Watson NLP
 
-Final project for the *Developing AI Applications with Python and Flask* course.
-This application takes a piece of text, runs it through the Watson NLP
-`EmotionPredict` service, and reports the scores for anger, disgust, fear,
-joy and sadness, along with the dominant emotion — through both a Python
-package and a small Flask web app.
+Este es el **Proyecto Final** del curso *Developing AI Applications with
+Python and Flask* (IBM). La aplicacion toma un texto, lo analiza con el
+servicio Watson NLP EmotionPredict, y reporta los puntajes de anger,
+disgust, fear, joy y sadness, junto con la emocion dominante, a traves
+de un paquete de Python y una pequena aplicacion web con Flask.
 
-## Project structure
+## Estructura del proyecto
 
-```
-emotion-detector/
-├── EmotionDetection/
-│   ├── __init__.py
-│   └── emotion_detection.py   # core emotion_detector() function
-├── templates/
-│   └── index.html             # web UI
-├── static/
-│   └── mywebscript.js         # calls the /emotionDetector endpoint
-├── server.py                  # Flask application
-├── test_emotion_detection.py  # unit tests
-└── requirements.txt
-```
+- EmotionDetection/__init__.py
+- EmotionDetection/emotion_detection.py (funcion principal emotion_detector)
+- templates/index.html (interfaz web)
+- static/mywebscript.js (llama al endpoint /emotionDetector)
+- server.py (aplicacion Flask)
+- test_emotion_detection.py (pruebas unitarias)
+- requirements.txt
 
-## Setup
+## Instalacion
 
-```bash
 pip install -r requirements.txt
-```
 
-## Running the tests
+## Ejecutar las pruebas
 
-```bash
 python3 -m unittest test_emotion_detection.py
-```
 
-## Running the web app
+## Ejecutar la aplicacion web
 
-```bash
 python3 server.py
-```
 
-Then open `http://localhost:5000` in a browser, type a sentence, and
-click **Run Emotion Detection**.
+Luego abre http://localhost:5000 en el navegador.
 
-## Static code analysis
+## Analisis estatico de codigo
 
-```bash
 pip install pylint
 pylint server.py
-```
